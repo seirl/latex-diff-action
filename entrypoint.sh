@@ -126,7 +126,7 @@ if [[ -n "$compile_diff" ]]; then
       latexdiff_compiler_arg="--lualatex"
   fi
   info "latex diff"
-  git-latexdiff --verbose --main "$root_file" $latexdiff_compiler_arg --no-view -o diff.pdf --cleanup all --ignore-makefile $(git rev-parse HEAD^) --
+  git-latexdiff --verbose --main "$root_file" $latexdiff_compiler_arg --no-view -o diff.pdf --cleanup all $(git rev-parse HEAD^) --
 fi
 
 if [[ -n "$with_stats" ]]; then
